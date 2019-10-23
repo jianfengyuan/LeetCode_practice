@@ -1,0 +1,5 @@
+venv/
+.idea/
+.ipynb_checkpoints/
+mnist/
+deep_learning_tenserflow/

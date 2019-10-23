@@ -3,7 +3,6 @@
 #
 # [127] Word Ladder
 #
-
 # @lc code=start
 import collections
 class Solution:
@@ -36,7 +35,4 @@ class Solution:
                         
             length += 1
         return 0
-
-
-# @lc code=end
 
