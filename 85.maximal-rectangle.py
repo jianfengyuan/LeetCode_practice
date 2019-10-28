@@ -7,10 +7,13 @@
 # @lc code=start
 class Solution:
     def maximalRectangle(self, matrix: List[List[str]]) -> int:
+        '''
+        把每一行matrix看作histogram的高度,其他的按照largest rectangle in histogram的做
+        '''
+        
         if not matrix: return 0
         height = [0]*(len(matrix[0])+1)
         ans = 0
-        
         for i in range(len(matrix)):
             for j in range(len(matrix[i])):
                 if int(matrix[i][j]):
