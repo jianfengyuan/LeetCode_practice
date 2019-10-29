@@ -12,16 +12,19 @@ class Solution:
         m = len(nums2)
         lo = 0
         hi = n
-        while lo > hi:
+        while lo <= hi:
             i = (lo + hi)//2
             j = (m+n+1) // 2 - i
             maxLeftA = -float("INF") if i == 0 else nums1[i-1]
             minRightA = float("INF") if i == n else nums1[i]
             maxLeftB = -float("INF") if j == 0 else nums2[j-1]
             minRightB = float("INF") if j == m else nums2[j]
-            print(minRightA,minRightB,maxLeftA,maxLeftB)
-            if maxLeftA < minRightB and minRightA < maxLeftB:
-                return (max(maxLeftA + maxLeftB) + max(minRightA+minRightB)) /2
+            
+            if maxLeftA <= minRightB and minRightA >= maxLeftB:
+                if (m + n) % 2 == 0:
+                    return (max(maxLeftA , maxLeftB) + min(minRightA, minRightB)) /2
+                else:
+                    return max(maxLeftA, maxLeftB)
             elif maxLeftA > minRightB:
                 hi = i - 1
             else:
