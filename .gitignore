@@ -3,4 +3,4 @@ venv/
 .ipynb_checkpoints/
 mnist/
 deep_learning_tenserflow/
-./vscode
+.vscode/
